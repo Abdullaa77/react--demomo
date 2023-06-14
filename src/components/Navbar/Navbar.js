@@ -34,6 +34,7 @@ function Navbar(props) {
                 </Container>
             </AppBar>
             {showBasket && <Basket/>}
+            <p>salom</p>
         </nav>
     );
 }
