@@ -1,0 +1,76 @@
+aside{
+    width: 500px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 456;
+}
+aside .top{
+    width: 500px;
+}
+aside .top h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+aside .top h2 .fa-close{
+    font-size: 50px;
+}
+aside .box{
+    width: 500px;
+    background-color: black;
+    border: 2px solid gray;
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+aside .box .img{
+    height: 80px;
+    width: 80px;
+    background-color: gray;
+    margin-right: 20px;
+}
+aside .box .img img{
+    max-width: 100%;
+    height: auto;
+}
+aside .box .text p,h3{
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
+aside .btnGroup button{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid gray;
+    color: white;
+    margin: 0px 5px;
+}
+aside .total{
+    border-top: 2px solid gray;
+    width: 100%;
+    margin-top: 50px;
+    padding: 30px 20px;
+    color: white;
+}
+aside .total h4{
+    font-size: 30px;
+    margin-left: 50px;
+}
+aside .total h4 span{
+    color: gray;
+    margin-left: 10px;
+}

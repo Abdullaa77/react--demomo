@@ -1,0 +1,22 @@
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 234;
+}
+nav .css-hip9hq-MuiPaper-root-MuiAppBar-root{
+    background-color: black !important;
+}
+nav ul{
+  display: flex;
+  align-items: center;
+}
+nav ul li{
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 30px;
+  text-transform: capitalize;
+  margin-left: 30px;
+  color: white;
+}

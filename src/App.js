@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { useEffect, useReducer, useState } from 'react';
+import Navbar from './components/Navbar/Navbar';
+import {API_KEY} from './utlilts/constants'
+import Product from './components/Product/Product';
+import {Contexts} from './Context/Contexts'
+import BasketReducer, { intialzeState } from './reducer/BasketReducer';
+function App(props) {
+  const [datas,setDatas] = useState([])
+  const [showBasket,setShowBasket] = useState(false)
+  const [state,dispatch] = useReducer(BasketReducer,intialzeState)
+  useEffect(() => {
+    fetch(`${API_KEY}/products`)
+      .then(data => data.json())
+      .then(data => setDatas(data))
+      .catch(err => console.log(err))
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Contexts.Provider value={{datas,setDatas,showBasket,setShowBasket,state,dispatch}}>
+        <Navbar/>
+        <Product/>
+      </Contexts.Provider>
     </div>
   );
 }
